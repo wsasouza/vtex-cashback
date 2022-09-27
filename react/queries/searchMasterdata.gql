@@ -1,0 +1,9 @@
+query searchMasterdata {
+  searchMasterdata {
+    id
+    cashback
+    value
+    rule
+    name
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "cashback",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint --ext js,jsx,ts,tsx .",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,tsx,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,graphql,gql}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.21",
+    "@vtex/prettier-config": "^0.1.4",
+    "eslint": "^7.12.1",
+    "eslint-config-vtex": "^12.3.2",
+    "eslint-config-vtex-react": "^6.4.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.1",
+    "prettier": "^2.0.2",
+    "typescript": "^3.8.3",
+    "vtex.rich-text": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.14.0/public/@types/vtex.rich-text",
+    "vtex.store-image": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-image@0.11.0/public/@types/vtex.store-image",
+    "vtex.condition-layout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.condition-layout@1.4.0/public/@types/vtex.condition-layout"
+  },
+  "dependencies": {
+    "@vtex/clients": "^2.15.2",
+    "babel-plugin-react-intl": "^8.2.25",
+    "react-apollo": "^3.1.5",
+    "react-intl": "^5.20.7"
+  }
+}
